@@ -31,3 +31,26 @@
     transform: rotate(360deg);
   }
 }
+.search{
+  display: inline-flex;
+}
+.image{
+  width:220px;
+  height: 150px;
+  cursor: pointer;
+}
+.items{
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2%;
+  max-width: 250px;
+}
+ .title{
+   font-size: 15px;
+   cursor: pointer;
+ }
+ .video{
+   padding: 2%;
+ }
+
+ 
