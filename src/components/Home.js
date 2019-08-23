@@ -4,7 +4,8 @@ import { Homepage_List } from '../containers/Homepage_List';
 import {bindActionCreators} from 'redux';
 import { VideoPlayer } from "../containers/VideoPlayer.js";
 import { connect } from "react-redux";
-import {onclick,auto} from '../actions/action.js';
+import {onclick,auto,search} from '../actions/action.js';
+import { fetchHomeData } from "../apis/api.js";
 const mapStateToProps=(store)=>{
     return({
         video:store.video,
@@ -14,12 +15,12 @@ const mapStateToProps=(store)=>{
 }
 const mapDispatchToProps=(dispatch)=>{
     return bindActionCreators({
-        onclick,auto
+        onclick,auto,search
     },dispatch)
 }
 class Home extends Component{
     componentDidMount(){
-        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=15&key=AIzaSyBjhFK9MovixovHfXxDM3RUHST7ClMAFNY').then((response)=>response.json()).then(
+        fetchHomeData().then((response)=>response.json()).then(
             (json)=>{
                 console.log(json);
                 this.props.auto(json.items);
@@ -27,10 +28,11 @@ class Home extends Component{
         )
     }
     render(){
+        window.scrollTo(0,0)
         return(
             <div>
                 <div>
-                    <Searchbar click={this.props.click}/>
+                    <Searchbar search={this.props.search}/>
                 </div>
                 {
                     this.props.status && <VideoPlayer curr={this.props.curr} />

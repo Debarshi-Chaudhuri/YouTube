@@ -1,9 +1,12 @@
 import React,{useState} from "react";
 import '../App.css'
 export const VideoPlayer=(props)=>{
-    const vidSrc=`https://www.youtube.com/embed/${props.curr.id}`
+    var id=props.curr.id;
+    if(typeof(props.curr.id)!='string')
+    id=props.curr.id.videoId
+    const vidSrc=`https://www.youtube.com/embed/${id}`
     const [status,setStatus]=useState(false)
-    console.log(props.curr)
+    console.log(id)
     return(
         <div className='video'>
             <iframe  width="740" height="400" src={vidSrc} frameBorder='0' allowFullScreen></iframe>    

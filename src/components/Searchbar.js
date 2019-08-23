@@ -12,9 +12,11 @@ class Searchbar extends Component{
         return(
             <div className='search' >
                 <h3>Youtube</h3>
-                <input type='text' onChange={this.change} placeholder='Search' />
-                <button onClick={()=>this.props.click(this.state.text)}>Search</button>
-                
+                <input type='text' onChange={this.change} placeholder='Search' value={this.state.text} />
+                <button onClick={()=>{
+                    this.props.search(this.state.text);
+                    this.setState({text:''})
+                }}>Search</button>
             </div>
         )
     }

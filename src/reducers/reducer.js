@@ -7,6 +7,7 @@ export const reducer=(state=initialState,action)=>{
     switch(action.type){
         case 'AUTO':return{
             ...state,
+            status:false,
             video:action.payload
         }
         case 'ONCLICK':return{

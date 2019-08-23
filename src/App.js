@@ -4,12 +4,10 @@ import './App.css';
 import Home  from './components/Home.js';
 function App() {
   return (
-    <div >
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/:id'  />
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/:id'  />
+    </Switch>
   );
 }
 

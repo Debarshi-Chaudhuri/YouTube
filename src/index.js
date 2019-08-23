@@ -8,7 +8,8 @@ import {Provider} from 'react-redux';
 import { reducer } from "./reducers/reducer.js";
 import {createStore,applyMiddleware} from 'redux';
 import logger from 'redux-logger';
-const store=createStore(reducer,applyMiddleware(logger))
+import thunk from 'redux-thunk';
+const store=createStore(reducer,applyMiddleware(thunk,logger))
 ReactDOM.render(<Provider store={store} ><BrowserRouter><App /></BrowserRouter></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

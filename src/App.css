@@ -33,6 +33,21 @@
 }
 .search{
   display: inline-flex;
+  align-items: center;
+  padding: 2%;
+}
+.search,h3{
+  font-size: 25px;
+  margin-left: 5%;
+}
+.search,input{
+  margin-left: 25%;
+  width: 900px;
+  height:30px;
+}
+.search,button{
+  margin-left: 4px;
+  height: 35px;
 }
 .image{
   width:220px;
