@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import '../App.css'
+import icon from '../icon.svg'
+import { Button } from "@material-ui/core";
 class Searchbar extends Component{
     constructor(props){
         super(props)
@@ -12,11 +14,11 @@ class Searchbar extends Component{
         return(
             <div className='search' >
                 <h3>Youtube</h3>
-                <input type='text' onChange={this.change} placeholder='Search' value={this.state.text} />
-                <button onClick={()=>{
+                <input type='text' style={{borderRadius:'5px',borderWidth:'1px'}}  onChange={this.change} placeholder='Search' value={this.state.text} />
+                <Button  variant='contained' style={{backgroundColor:'rgba(233, 233, 233, 0.966)',marginLeft:'4px',color:'white'}} onClick={()=>{
                     this.props.search(this.state.text);
                     this.setState({text:''})
-                }}>Search</button>
+                }}><img src={icon} style={{color:'white'}} /></Button>
             </div>
         )
     }
