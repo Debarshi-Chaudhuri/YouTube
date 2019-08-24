@@ -14,7 +14,7 @@ class Searchbar extends Component{
         return(
             <div className='search' >
                 <h3>Youtube</h3>
-                <input type='text' style={{borderRadius:'5px',borderWidth:'1px'}}  onChange={this.change} placeholder='Search' value={this.state.text} />
+                <input type='text' style={{borderRadius:'5px',borderWidth:'1px',textIndent:'8px'}}  onChange={this.change} placeholder='Search' value={this.state.text} />
                 <Button  variant='contained' style={{backgroundColor:'rgba(233, 233, 233, 0.966)',marginLeft:'4px',color:'white'}} onClick={()=>{
                     this.props.search(this.state.text);
                     this.setState({text:''})
