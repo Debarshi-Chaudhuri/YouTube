@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import Searchbar from './Searchbar.js';
+import {Searchbar} from './Searchbar.js';
 import { Homepage_List } from '../containers/Homepage_List';
 import {bindActionCreators} from 'redux';
 import { VideoPlayer } from "../containers/VideoPlayer.js";
