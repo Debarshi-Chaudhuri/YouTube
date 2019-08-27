@@ -52,7 +52,6 @@
   cursor: pointer;
 }
 .items{
-  display: inline-flex;
   flex-direction: column;
   padding: 2%;
   max-width: 250px;
@@ -63,6 +62,7 @@
  }
  .video{
    padding: 2%;
+   width:900px;
  }
 
  

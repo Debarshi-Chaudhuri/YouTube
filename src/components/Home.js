@@ -34,11 +34,13 @@ class Home extends Component{
                 <div>
                     <Searchbar search={this.props.search}/>
                 </div>
-                {
-                    this.props.status && <VideoPlayer curr={this.props.curr} />
-                }
-                <div>
-                    <Homepage_List video={this.props.video} onclick={this.props.onclick} />
+                <div style={{display:'flex'}} >
+                    {
+                        this.props.status && <VideoPlayer curr={this.props.curr} />
+                    }
+                    <div >
+                        <Homepage_List video={this.props.video} onclick={this.props.onclick} status={this.props.status} />
+                    </div>
                 </div>
             </div>
         )
