@@ -32,7 +32,7 @@ export const VideoPlayer=(props)=>{
                 {
                     status &&
                     <div>
-                        <p style={{fontSize:'14px',fontWeight:'lighter'}}>{props.curr.snippet.description}</p>
+                        <p style={{fontSize:'14px',fontWeight:'lighter',width:'800px'}}>{props.curr.snippet.description}</p>
                     </div>
                 }
             </div>
